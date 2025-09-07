@@ -184,7 +184,7 @@ try {
             Write-Host "`n--- ACTUALIZACIONES DE SEGURIDAD ($($securityUpdates.Count)) ---" -ForegroundColor Red
             $securityUpdates | ForEach-Object {
                 $kb = if ($_.KB) { "KB$($_.KB)" } else { "Sin KB" }
-                Write-Host "$kb: $($_.Title)" -ForegroundColor Yellow
+                Write-Host "$($kb): $($_.Title)" -ForegroundColor Yellow
             }
         }
         
@@ -199,7 +199,7 @@ try {
             Write-Host "`n--- OTRAS ACTUALIZACIONES ($($otherUpdates.Count)) ---" -ForegroundColor Magenta
             $otherUpdates | ForEach-Object {
                 $kb = if ($_.KB) { "KB$($_.KB)" } else { "Sin KB" }
-                Write-Host "$kb: $($_.Title)" -ForegroundColor Gray
+                Write-Host "$($kb): $($_.Title)" -ForegroundColor Gray
             }
         }
         
